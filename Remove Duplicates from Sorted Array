@@ -1,0 +1,16 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int j = 0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=nums[j]){
+                j++;
+                nums[j] = nums[i];
+            }
+        }
+        return j+1;
+    }
+}
+
+//We need to find the unique elements in the array 
+//consider j at 0 and we are traversing if both the elements are not equal we increment j and nums[j] = nums[i] 
+// Dry Run once the see the result
